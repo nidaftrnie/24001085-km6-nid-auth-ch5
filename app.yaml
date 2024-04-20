@@ -1,2 +1,5 @@
 runtime: nodejs20
 service: default
+
+vpc_access_connector:
+    name: "projects/nida-challenge-5/locations/asia-southeast2/connectors/connect-to-sql"
