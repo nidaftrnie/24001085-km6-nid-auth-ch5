@@ -12,6 +12,7 @@ app.use(express.static("public"));
 app.use(
   fileUpload({
     useTempFiles: true,
+    tempFileDir: process.env.NODE_ENV == "development" ? "./tmp" : "/tmp", // if you're using GCP App Engine please don't comment this, because the ./tmp directory is read only and we need write too so we use /tmp
   })
 );
 
