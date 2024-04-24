@@ -3,9 +3,13 @@ require("dotenv").config();
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const router = require("./route");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 4000;
+
+// enable cors, to allow access from frontend to server (cloud)
+app.use(cors());
 
 app.use(express.json());
 app.use(express.static("public"));

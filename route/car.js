@@ -4,10 +4,7 @@ const carController = require("../controller/car");
 const { authMiddleware } = require("../middleware/auth");
 
 /* Add routes */
-router
-  .route("/")
-  .get(authMiddleware(["user", "admin"]), carController.getCars)
-  .post(authMiddleware(["admin"]), carController.addCar);
+router.route("/").get(authMiddleware(["user", "admin"]), carController.getCars).post(authMiddleware(["admin"]), carController.addCar);
 
 router
   .route("/:id")
