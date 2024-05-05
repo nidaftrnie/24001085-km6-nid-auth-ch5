@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       plate: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       image: {

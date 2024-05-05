@@ -52,12 +52,6 @@ exports.updateCarDetail = async (req, res, next) => {
         message: "Car model id must be filled!",
       });
     }
-    if (!plate || plate == "") {
-      return next({
-        statusCode: 400,
-        message: "Plate must be filled!",
-      });
-    }
     if (!rentPerDay || rentPerDay == "") {
       return next({
         statusCode: 400,
