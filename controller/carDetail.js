@@ -55,7 +55,7 @@ exports.updateCarDetail = async (req, res, next) => {
     if (!plate || plate == "") {
       return next({
         statusCode: 400,
-        message: "Plate model must be filled!",
+        message: "Plate must be filled!",
       });
     }
     if (!rentPerDay || rentPerDay == "") {
@@ -67,13 +67,13 @@ exports.updateCarDetail = async (req, res, next) => {
     if (!available || available == "") {
       return next({
         statusCode: 400,
-        message: "Available model id must be filled!",
+        message: "Available must be filled!",
       });
     }
     if (!description || description == "") {
       return next({
         statusCode: 400,
-        message: "Description model id must be filled!",
+        message: "Description must be filled!",
       });
     }
 
